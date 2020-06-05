@@ -5,8 +5,10 @@ WORKDIR /app
 ## it copies the app to /app directory with dependencies.
 COPY package.json /app
 RUN npm install
+## it install express
+RUN npm install express
 COPY . /app
 ## it commands to run our app which is index.js.
 CMD node index.js
 ##  it exposes the port where our app is running that is port 8080.
-EXPOSE 8080
+EXPOSE 3000
