@@ -4,7 +4,11 @@ pipeline {
   tools {nodejs "node"}
     
   stages {
-        
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/luccadias/helloworld.git'
+      }
+    }
     stage('Install dependencies') {
       steps {
         sh 'npm install'
